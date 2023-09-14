@@ -76,7 +76,7 @@ img {
 
 .nav-menu {
   display: flex;
-
+  position: relative;
 }
 
 .web {
@@ -116,18 +116,35 @@ img {
   text-decoration: underline;
 }
 
+.nav li a:active::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #404BBF;
+}
+
 .nav li a:hover {
-  color: #404bbf
+  color: #404bbf;
+
 }
 
 .nav li a:focus {
-  color: #404bbf
+  color: #404bbf;
+
 }
+
 
 .list-header {
   padding: 24px 0 24px;
   display: inline-block;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .address {
   font-style: normal;
@@ -178,7 +195,11 @@ img {
 /* Container 1 */
 .hero {
   padding: 188px 0;
-  background: var(--navyblue, #2e2f42);
+  background-color: var(--navyblue, #2e2f42);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
   margin: auto;
 }
 
@@ -199,8 +220,7 @@ img {
 
 
 .btn-order-service {
-
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   color: var(--white, #fff);
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -208,7 +228,6 @@ img {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-
   min-width: 169px;
   display: block;
   height: 56px;
@@ -216,12 +235,14 @@ img {
   padding: 16px 32px;
   border-radius: 4px;
   cursor: pointer;
-
   margin: auto;
-
-
 }
 
+.btn-order-service:hover {
+  background-color: #404BBF;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 .btn-order-service:hover {
@@ -248,7 +269,6 @@ img {
 
 .card-feature-items {
   flex-basis: calc((100% - 3 * 24px) / 4);
-
 }
 
 
@@ -256,6 +276,17 @@ img {
 .card-feature-items:last-child {
   margin-right: 0;
 }
+
+.icons-feature {
+  border-radius: 4px;
+  border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+  background: var(--CLOUD, #F4F4FD);
+  width: 264px;
+  height: 112px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 
 .visually-hidden {
   width: 1px;
@@ -278,9 +309,9 @@ img {
   font-weight: 500;
   letter-spacing: 0.4px;
   margin-bottom: 8px;
-
-
 }
+
+
 
 /* Container 3 */
 
@@ -318,6 +349,40 @@ img {
   margin-right: 0;
 }
 
+.icons-list-team {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-bottom: 32px;
+
+
+}
+
+.icons-inside-list-team {
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-inside-list-team:hover {
+  background-color: #404BBF;
+
+}
+
+.icons-inside-list-team-soc {
+  max-width: 100%;
+}
+
+.icon-socials {
+  fill: #F4F4FD;
+}
+
 .team-text {
   padding: 32px 0;
   display: flex;
@@ -340,14 +405,40 @@ img {
   row-gap: 48px;
 }
 
+
+
 .card-list {
   width: calc((100% - 48px) / 3);
-  background: var(--WHITE, #FFF);
+  background-color: var(--WHITE, #FFF);
+  background-repeat: no-repeat;
+
 }
+
 
 .card-list:last-child {
   margin-right: 0;
 }
+
+.img-portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  background-color: #4D5AE5;
+  color: #F4F4FD;
+  inset: 0;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.card-list:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
 
 .apps-title {
   padding: 32px 16px;
@@ -374,7 +465,6 @@ img {
 
 .text-footer {
   color: var(--cloud, #f4f4fd);
-
   max-width: 264px;
 }
 
@@ -383,4 +473,31 @@ img {
   color: var(--iris, #4d5ae5);
   display: inline-block;
   text-transform: uppercase;
+}
+
+.text-socials {
+  color: var(--WHITE, #FFF);
+  font-weight: 500;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons-inside-list-footer {
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-inside-list-footer:hover {
+  background-color: #31D0AA;
+
 }
