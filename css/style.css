@@ -365,8 +365,6 @@ img {
   justify-content: center;
   gap: 24px;
   padding-bottom: 32px;
-
-
 }
 
 .icon-ul {
@@ -376,7 +374,7 @@ img {
   gap: 24px;
 }
 
-.icon-inside-list-team {
+.icons-inside-list-team {
   width: 40px;
   height: 40px;
 }
@@ -537,8 +535,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-inside-list-footer-soc {
