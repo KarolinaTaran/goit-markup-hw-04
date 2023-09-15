@@ -369,20 +369,6 @@ img {
 
 }
 
-.icons-inside-list-team {
-  width: 40px;
-  height: 40px;
-  background-color: #4D5AE5;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.icons-inside-list-team:hover {
-  background-color: #404BBF;
-
-}
-
 .icon-ul {
   display: flex;
   justify-content: center;
@@ -390,9 +376,30 @@ img {
   gap: 24px;
 }
 
+.icon-inside-list-team {
+  width: 40px;
+  height: 40px;
+}
+
 .icons-inside-list-team-soc {
   width: 100%;
   height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icons-inside-list-team-soc:hover {
+  background-color: #404bbf;
+
+}
+
+.icons-inside-list-team-soc:focus {
+  background-color: #404bbf;
+
 }
 
 .icon-socials {
@@ -457,11 +464,15 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-list:hover .portfolio-overlay {
-  transform: translateY(0);
+.card-list:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.card-list:hover .portfolio-overlay {
+  transform: translateY(0);
+
 }
 
 
@@ -475,7 +486,10 @@ img {
 .footer {
   background-color: #2e2f42;
   padding: 100px 0;
+}
 
+.footer-logo-text {
+  margin-right: 120px;
 
 }
 
@@ -502,7 +516,7 @@ img {
 }
 
 .text-socials {
-  color: var(--WHITE, #FFF);
+  color: #FFFFFF;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -527,9 +541,22 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons-inside-list-footer:hover {
-  background-color: #31D0AA;
+.icons-inside-list-footer-soc {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.icons-inside-list-footer-soc:hover {
+  background-color: #31d0aa;
+}
+
+.icons-inside-list-footer-soc:focus {
+  background-color: #31d0aa;
 }
 
 .icons-list-footer {
@@ -540,4 +567,9 @@ img {
 .footer-section {
   display: flex;
   align-items: baseline;
+}
+
+.icon-soc-footer {
+  fill: #f4f4fd;
+
 }
