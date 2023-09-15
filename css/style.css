@@ -136,9 +136,9 @@ img {
 .list-header {
   padding: 24px 0 24px;
   display: inline-block;
+  color: #404bbf;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #404bbf;
 }
 
 .list-header::after {
@@ -181,7 +181,7 @@ img {
   color: #404bbf;
 }
 
-.adress-info {
+.address-info {
   padding-right: 156px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
